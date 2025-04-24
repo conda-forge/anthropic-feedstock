@@ -11,20 +11,20 @@ source:
   sha256: 18214331a4e679428015ce0af7fee157b112b81d4f6be105c70674c03796738b
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation --ignore-installed --no-cache-dir -vv
   number: 0
+  skip: true  # [py<38]
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - poetry-core >=1.0.0
     - hatch-fancy-pypi-readme
     - hatchling
     - pip
   run:
     - typing_extensions >=4.10,<5
-    - python >={{ python_min }},<4.0.0
+    - python
     - httpx >=0.25.0,<1
     - pydantic >=1.9.0,<3
     - typing-extensions >=4.7,<5
@@ -42,14 +42,19 @@ test:
     - pip check
   requires:
     - pip
-    - python {{ python_min }}
 
 about:
   home: https://github.com/anthropics/anthropic-sdk-python
   license: MIT
   license_file: LICENSE
+  license_family: MIT
   summary: Library for accessing the anthropic API
+  description: |
+    The Anthropic Python SDK is a library for accessing the anthropic API.
+    It provides a simple and intuitive interface for making requests to the API and handling responses.
+    The SDK is designed to be easy to use and integrate into your existing Python projects.
   doc_url: https://console.anthropic.com/docs
+  dev_url: https://github.com/anthropics/anthropic-sdk-python
 
 extra:
   recipe-maintainers:
