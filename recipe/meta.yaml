@@ -1,5 +1,5 @@
 {% set name = "anthropic" %}
-{% set version = "0.67.0" %}
+{% set version = "0.68.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/anthropics/anthropic-sdk-python/archive/v{{ version }}.tar.gz
-  sha256: d14db3fdf53200fbaac3f83365e3e94e6c7e36990412ab46ceff92c470b1af82
+  sha256: ecd5756d1b8c8421ef7de5640f4d4607a0c357eef67389d8370acb54cee395d6
 
 build:
   noarch: python
@@ -23,6 +23,7 @@ requirements:
     - hatchling
     - pip
   run:
+    - docstring_parser >=0.15,<1
     - typing_extensions >=4.10,<5
     - python >={{ python_min }},<4.0.0
     - httpx >=0.25.0,<1
