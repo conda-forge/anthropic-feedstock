@@ -23,7 +23,6 @@ requirements:
     - hatchling
     - pip
   run:
-    - docstring-parser >=0.15,<1
     - docstring_parser >=0.15,<1
     - typing_extensions >=4.10,<5
     - python >={{ python_min }},<4.0.0
