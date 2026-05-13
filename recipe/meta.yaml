@@ -1,5 +1,5 @@
 {% set name = "anthropic" %}
-{% set version = "0.101.0" %}
+{% set version = "0.102.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/anthropics/anthropic-sdk-python/archive/v{{ version }}.tar.gz
-  sha256: 2308327f9075ab3b0f3ed88565bb329099f684ce7f773551fe03f3e72eb28d8d
+  sha256: b4bbb535d6251f51248fe63cdaad0e46fcb7b511fbb7db212d68cbaf9e9136fa
 
 build:
   noarch: python
