@@ -1,5 +1,5 @@
 {% set name = "anthropic" %}
-{% set version = "0.120.2" %}
+{% set version = "0.121.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://github.com/anthropics/anthropic-sdk-python/archive/v{{ version }}.tar.gz
-  sha256: 217d1d769b204242b4782a4ba3657dd5ad3d11c9e6dad8b6caae5e307f9c1b58
+  sha256: 83b66050d924c30b53fb9a5641fffee62c54b790fe286c1373cf4b806c3643b6
 
 build:
   noarch: python
@@ -31,7 +31,7 @@ requirements:
     - typing-extensions >=4.7,<5
     - anyio >=3.5.0,<5
     - distro >=1.7.0,<2
-    - sniffio
+    - sniffio >=1,<2
     - cached-property
     - tokenizers >=0.13.0
     - jiter >=0.4.0,<1
