@@ -196,6 +196,3 @@ Feedstock Maintainers
 * [@siboehm](https://github.com/siboehm/)
 * [@x5a](https://github.com/x5a/)
 
-
-<!-- dummy commit to enable rerendering -->
-
