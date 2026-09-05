@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: anthropic
-  version: 1.3.0
+  version: 1.4.0
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/anthropics/anthropic-sdk-python/archive/v${{ version }}.tar.gz
-  sha256: 9717c563a74e8d4aa28a9150dc5f6724c2ca20096d8e932a9745b1fc69158bec
+  sha256: 6c39b4173ff606e8f869e88a6edb3fa693edeb66140733c9778fc67ff5c1e41c
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -29,16 +29,10 @@ requirements:
     - docstring_parser >=0.15,<1
     - typing_extensions >=4.14,<5
     - python >=${{ python_min }},<4.0.0
-    - httpx >=0.25.0,<1
     - pydantic >=1.9.0,<3
-    - typing-extensions >=4.7,<5
     - anyio >=3.5.0,<5
-    - distro >=1.7.0,<2
     - sniffio >=1,<2
-    - cached-property
-    - tokenizers >=0.13.0
     - jiter >=0.4.0,<1
-
 tests:
   - python:
       imports:
@@ -46,7 +40,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}
-        - "*"
+        - '*'
 
 about:
   license: MIT
