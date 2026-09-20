@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: anthropic
-  version: 1.6.0
+  version: 1.7.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/anthropics/anthropic-sdk-python/archive/v${{ version }}.tar.gz
-  sha256: 3d3297fc5c0441a3d6348134a6fbdcf4197ccca47dd92e261578c1153beed6ca
+  sha256: a1cdad8a753218310dab3a3466501fb99ca9e9426a7408f86f4245364482994f
 
 build:
   number: 0
@@ -29,7 +29,7 @@ requirements:
     - docstring_parser >=0.15,<1
     - typing_extensions >=4.14,<5
     - python >=${{ python_min }},<4.0.0
-    - pydantic >=1.9.0,<3
+    - pydantic >=1.10.0,<3
     - anyio >=4.1.0,<5
     - sniffio >=1,<2
     - jiter >=0.4.0,<1
