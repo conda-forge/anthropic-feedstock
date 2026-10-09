@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: anthropic
-  version: "1.12.1"
+  version: "1.13.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/anthropics/anthropic-sdk-python/archive/v${{ version }}.tar.gz
-  sha256: ee27980ced6c5e916dcd662b8ae18502a8be68897888818918fdfb0c6cd2ecd2
+  sha256: efcd77594ef3662c30cdcede0fbeb197ebde22f466dfb5f75f32cb302d6390db
 
 build:
   number: 0
