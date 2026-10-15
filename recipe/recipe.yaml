@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: anthropic
-  version: "1.13.0"
+  version: 1.14.0
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/anthropics/anthropic-sdk-python/archive/v${{ version }}.tar.gz
-  sha256: efcd77594ef3662c30cdcede0fbeb197ebde22f466dfb5f75f32cb302d6390db
+  sha256: 4bbcf33167a4a0540d62a67ea21b23c6e64dfe464272317fadf1dd1dfd4b1eb7
 
 build:
   number: 0
@@ -33,6 +33,7 @@ requirements:
     - anyio >=4.1.0,<5
     - sniffio >=1,<2
     - jiter >=0.4.0,<1
+    - opentelemetry-api >=1.1.0,<2
 tests:
   - python:
       imports:
